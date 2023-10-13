@@ -1,0 +1,20 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+<h1>Bodegas</h1>
+
+<ul>
+    <table class="table table-success table-striped">
+        <?php foreach ($bodegas as $bodega) : ?>
+            <tr>
+                <td class="table-secondary"> <a href="mostrarVinosPorBodega/<?= $bodega->id_bodega ?>"><?= $bodega->Nombre_bodega ?></a></td>
+                <td class="table-secondary"> <a href="eliminarBodega/<?= $bodega->id_bodega ?>"type="button" class='btn btn-secondary ml-auto'>Borrar</a> </td>
+                <td class="table-secondary"> <a href="modificarBodega/<?= $bodega->id_bodega ?>"type="button" class='btn btn-secondary ml-auto'>Modificar</a> </td>
+            </tr>
+        <?php endforeach ?>
+    </table>
+
+</ul>
+
+<a href="agregarBodega" type="button" class='btn btn-secondary ml-auto'>Agregar Bodega</a>
+</div>
+<?php require 'templates/footer.phtml' ?>

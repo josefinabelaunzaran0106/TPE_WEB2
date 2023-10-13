@@ -1,0 +1,27 @@
+<?php require 'templates/header.phtml' ?>
+<h2>Agregar Vino</h2>
+<form action="enviarAgregarVino" method="POST">
+
+    <p>Nombre</p>
+    <input type="text" name="Nombre" placeholder=Nombre>
+    <p>Tipo</p>
+    <input type="text" name="Tipo" placeholder=Tipo>
+    <p>Azucar</p>
+    <input type="text" name="Azucar" placeholder=Azucar>
+    <h3>Bodega</h3>
+    <select name="id_bodega" placeholder=Bodega>
+        <?php foreach ($bodegas as $bodega) : ?>
+            <option value=<?= $bodega->id_bodega ?>><?= $bodega->Nombre_bodega ?></option>
+        <?php endforeach ?>
+    </select>
+    <h3>Cepa</h3>
+    <select name="id_cepa" placeholder=Cepa>
+        <?php foreach ($cepas as $cepa) : ?>
+            <option value=<?= $cepa->id_cepa ?>><?= $cepa->Nombre_cepa ?></option>
+        <?php endforeach ?>
+    </select>
+
+
+    <button type="submit">Agregar</button>
+</form>
+<?php require 'templates/footer.phtml' ?>

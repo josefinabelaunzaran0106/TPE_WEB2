@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+    <h1>Selecione una Cepa para buscar sus vinos</h2>
+
+        <ul>
+            <table class="table table-success table-striped">
+                <?php foreach ($cepas as $cepa) : ?>
+                    <tr>
+                        <td class="table-secondary"> <a href="mostrarCepa/<?= $cepa->id_cepa ?>"><?= $cepa->Nombre_cepa ?></a></td>
+                    </tr>
+                <?php endforeach ?>
+            </table>
+
+        </ul>
+</div>
+<?php require 'templates/footer.phtml' ?>

@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml' ?>
+<h2>Agregar Bodega</h2>
+<form action="enviarAgregarBodega" method="POST">
+
+    <p>Nombre</p>
+    <input type="text" name="Nombre_bodega" placeholder=Nombre>
+    <p>Ubicación</p>
+    <input type="text" name="Ubicación" placeholder=Ubicación>
+    <p>Año</p>
+    <input type="number" name="Año" placeholder=Año>
+    <p>Características</p>
+    <input type="text" name="Características" placeholder=Características>
+
+    <button type="submit">Agregar</button>
+</form>
+<?php require 'templates/footer.phtml' ?>

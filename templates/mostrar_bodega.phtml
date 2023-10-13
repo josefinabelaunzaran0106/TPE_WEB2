@@ -1,0 +1,22 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+    <h1>Info bodega:<?= $bodega->Nombre_bodega ?></h1>
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th>Ubicación</th>
+                    <th>Año</th>
+                    <th>Características</th>
+                </tr>
+                <thead>
+                <tbody>
+
+                    <tr>
+                        <td><?= $bodega->Ubicación ?></td>
+                        <td><?= $bodega->Año ?></td>
+                        <td><?= $bodega->Características ?></td>
+                    </tr>
+                </tbody>
+        </table>
+</div>
+<?php require 'templates/footer.phtml' ?>

@@ -1,0 +1,18 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+<h1>Vinos</h1>
+<ul>
+    <table class="table table-success table-striped">
+        <?php foreach ($vinos as $vino) : ?>
+            <tr>
+                <td class="table-secondary"><a href="mostrarVino/<?= $vino->ID_vino ?>"> <?= $vino->Nombre ?> </a></td>
+                <td class="table-secondary"><a href="eliminarVino/<?= $vino->ID_vino ?>" type="button" class='btn btn-secondary ml-auto'> Borrar</a></td>
+                <td class="table-secondary"><a href="modificarVino/<?= $vino->ID_vino ?>" type="button" class='btn btn-secondary ml-auto'> Modificar</a> </td>
+            </tr>
+        <?php endforeach ?>
+    </table>
+</ul>
+
+<a href="agregarVino" type="button" class='btn btn-secondary ml-auto'> Agregar Vino </a>
+</div>
+<?php require 'templates/footer.phtml' ?>

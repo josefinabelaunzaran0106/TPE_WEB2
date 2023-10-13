@@ -1,0 +1,23 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+<h1>Info cepa: <?= $cepa->Nombre_cepa ?></h2>
+
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Aroma</th>
+                <th>Maridaje</th>
+                <th>Textura</th>
+            </tr>
+            <thead>
+            <tbody>
+
+                <tr>
+                    <td><?= $cepa->Aroma ?></td>
+                    <td><?= $cepa->Maridaje ?></td>
+                    <td><?= $cepa->Textura ?></td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+    <?php require 'templates/footer.phtml' ?>

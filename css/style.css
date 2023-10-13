@@ -1,0 +1,72 @@
+.redes-sociales{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+.facebook{
+    display: flex;
+    flex-direction: column;
+    border: 10px;
+}
+.foto-facebook{
+    height: 50px;
+    width: 50px;
+}
+.foto-instagram{
+    height: 50px;
+    width: 50px;
+}
+.btn btn-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+header{
+    background-color: rgb(182, 179, 179);
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+}
+nav{
+    background-color: rgb(182, 179, 179);
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+p{
+    font-size: 18px;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    width: 100%;
+    background-color: #D3CBC6;
+    text-align: justify;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+}
+.img{
+    width: 100%;
+}
+.colorFondo{
+    background-color: #D3CBC6;
+}
+
+
+
+

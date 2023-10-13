@@ -1,0 +1,25 @@
+<?php require 'templates/header.phtml' ?>
+<div class="colorFondo">
+<h1>Info Vino: <?= $vino->Nombre ?> </h2>
+
+    <table class="table table-success table-striped">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Azucar</th>
+                <th>Cepa</th>
+                <th>Bodega</th>
+            </tr>
+            <thead>
+            <tbody>
+
+                <tr>
+                    <td><?= $vino->Tipo ?></td>
+                    <td><?= $vino->Azucar ?></td>
+                    <td><a href="mostrarCepa/<?= $vino->id_cepa ?>"><?= $vino->Nombre_cepa ?></a></td>
+                    <td><a href="mostrarBodega/<?= $vino->id_bodega ?>"><?= $vino->Nombre_bodega ?></a></td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+    <?php require 'templates/footer.phtml' ?>

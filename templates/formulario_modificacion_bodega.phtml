@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml' ?>
+<h2>Modificar Bodega</h2>
+<form action="enviarModificarBodega/<?= $id ?>" method="POST">
+
+    <p>Nombre</p>
+    <input type="text" name="Nombre_bodega" placeholder=<?= $bodega->Nombre_bodega ?>>
+    <p>Ubicación</p>
+    <input type="text" name="Ubicación" placeholder=<?= $bodega->Ubicación ?>>
+    <p>Año</p>
+    <input type="number" name="Año" placeholder=<?= $bodega->Año ?>>
+    <p>Características</p>
+    <input type="text" name="Características" placeholder=<?= $bodega->Características ?>>
+
+    <button type="submit">Modicar</button>
+</form>
+<?php require 'templates/footer.phtml' ?>

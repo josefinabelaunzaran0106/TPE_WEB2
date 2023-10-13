@@ -1,0 +1,16 @@
+<?php require 'templates/header.phtml' ?>
+<h2>Agregar Cepa</h2>
+<form action="enviarAgregarCepa" method="POST">
+
+    <p>Nombre</p>
+    <input type="text" name="Nombre_cepa" placeholder=Nombre>
+    <p>Aroma</p>
+    <input type="text" name="Aroma" placeholder=Aroma>
+    <p>Maridaje</p>
+    <input type="text" name="Maridaje" placeholder=Maridaje>
+    <p>Textura</p>
+    <input type="text" name="Textura" placeholder=Textura>
+
+    <button type="submit">Agregar</button>
+</form>
+<?php require 'templates/footer.phtml' ?>
