@@ -6,7 +6,7 @@
             <table class="table table-success table-striped">
                 <?php foreach ($bodegas as $bodega) : ?>
                     <tr>
-                        <td class="table-secondary"> <a href="mostrarBodega" <?= $bodega->id_bodega ?>><?= $bodega->Nombre_bodega ?></a></td>
+                        <td class="table-secondary"> <a href="mostrarBodega/<?= $bodega->id_bodega ?>"><?= $bodega->Nombre_bodega ?></a></td>
                     </tr>
                 <?php endforeach ?>
             </table>
