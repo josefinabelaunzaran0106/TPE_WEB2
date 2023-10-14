@@ -7,13 +7,16 @@
         <?php foreach ($cepas as $cepa) : ?>
             <tr>
                 <td class="table-secondary"><a href="mostrarCepa/<?= $cepa->id_cepa ?>"><?= $cepa->Nombre_cepa ?></a></td>
+                <?php if (isset($_SESSION['USER_ID'])) : ?>
                 <td class="table-secondary"><a href="eliminarCepa/<?= $cepa->id_cepa ?>"type="button" class='btn btn-secondary ml-auto'>Borrar</a> </td>
                 <td class="table-secondary"><a href="modificarCepa/<?= $cepa->id_cepa ?>"type="button" class='btn btn-secondary ml-auto'>Modificar</a></td>
-
+                <?php endif ?>
+            </tr>
             <?php endforeach ?>
     </table>
 </ul>
-
+<?php if (isset($_SESSION['USER_ID'])) : ?>
 <a href="agregarCepa" type="button" class='btn btn-secondary ml-auto'>Agregar Cepa</a>
+<?php endif ?>
 </div>
 <?php require 'templates/footer.phtml' ?>

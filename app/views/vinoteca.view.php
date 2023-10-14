@@ -5,15 +5,15 @@ class VinotecaView{
         require 'templates/home.phtml';
     }
     public function showVinos($vinos){
-        require 'templates/mostrar_vinos.phtml';
+        require 'templates/mostrar_vinos_modificar.phtml';
     }
 
     public function showVinosPorBodega($vinos, $bodega){
-        require 'templates/buscar_por_bodega.phtml';
+        require 'templates/mostrar_vinos_por_bodega.phtml';
     }
 
     public function showVinosPorCepa($vinos, $cepa){
-        require 'templates/buscar_por_cepa.phtml';
+        require 'templates/mostrar_vinos_por_cepa.phtml';
     }
     
 
@@ -22,16 +22,15 @@ class VinotecaView{
     }
 
     public function showBodegas($bodegas){
-        require 'templates/mostrar_bodegas.phtml';
+        require 'templates/mostrar_bodegas_modificar.phtml';
     }
-
 
     public function showBodega($bodega){
         require 'templates/mostrar_bodega.phtml';
     }
 
     public function showCepas($cepas){
-        require 'templates/mostrar_cepas.phtml';
+        require 'templates/mostrar_cepas_modificar.phtml';
     }
 
     public function showCepa($cepa){

@@ -1,12 +1,12 @@
 <?php require 'templates/header.phtml' ?>
 <div class="colorFondo">
     <h1>Selecione una Bodega para buscar sus vinos</h1>
-
+        
         <ul>
             <table class="table table-success table-striped">
                 <?php foreach ($bodegas as $bodega) : ?>
                     <tr>
-                        <td class="table-secondary"> <a href="mostrarBodega/<?= $bodega->id_bodega ?>"><?= $bodega->Nombre_bodega ?></a></td>
+                        <td class="table-secondary"> <a href="mostrarVinosPorBodega/<?= $bodega->id_bodega ?>"><?= $bodega->Nombre_bodega ?></a></td>
                     </tr>
                 <?php endforeach ?>
             </table>

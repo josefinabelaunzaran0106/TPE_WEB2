@@ -7,14 +7,17 @@
         <?php foreach ($bodegas as $bodega) : ?>
             <tr>
                 <td class="table-secondary"> <a href="mostrarVinosPorBodega/<?= $bodega->id_bodega ?>"><?= $bodega->Nombre_bodega ?></a></td>
+                <?php if (isset($_SESSION['USER_ID'])) : ?>
                 <td class="table-secondary"> <a href="eliminarBodega/<?= $bodega->id_bodega ?>"type="button" class='btn btn-secondary ml-auto'>Borrar</a> </td>
                 <td class="table-secondary"> <a href="modificarBodega/<?= $bodega->id_bodega ?>"type="button" class='btn btn-secondary ml-auto'>Modificar</a> </td>
+                <?php endif ?>
             </tr>
         <?php endforeach ?>
     </table>
 
 </ul>
-
+<?php if (isset($_SESSION['USER_ID'])) : ?>
 <a href="agregarBodega" type="button" class='btn btn-secondary ml-auto'>Agregar Bodega</a>
+<?php endif ?>
 </div>
 <?php require 'templates/footer.phtml' ?>

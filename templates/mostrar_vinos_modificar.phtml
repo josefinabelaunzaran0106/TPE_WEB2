@@ -6,13 +6,16 @@
         <?php foreach ($vinos as $vino) : ?>
             <tr>
                 <td class="table-secondary"><a href="mostrarVino/<?= $vino->ID_vino ?>"> <?= $vino->Nombre ?> </a></td>
+                <?php if (isset($_SESSION['USER_ID'])) : ?>
                 <td class="table-secondary"><a href="eliminarVino/<?= $vino->ID_vino ?>" type="button" class='btn btn-secondary ml-auto'> Borrar</a></td>
                 <td class="table-secondary"><a href="modificarVino/<?= $vino->ID_vino ?>" type="button" class='btn btn-secondary ml-auto'> Modificar</a> </td>
+                <?php endif ?>
             </tr>
         <?php endforeach ?>
     </table>
 </ul>
-
+<?php if (isset($_SESSION['USER_ID'])) : ?>
 <a href="agregarVino" type="button" class='btn btn-secondary ml-auto'> Agregar Vino </a>
+<?php endif ?>
 </div>
 <?php require 'templates/footer.phtml' ?>

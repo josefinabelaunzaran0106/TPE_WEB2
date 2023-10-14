@@ -4,12 +4,10 @@
 <ul>
     <table class="table table-success table-striped">
     <td class="table-secondary">Vino</td>
-    <td class="table-secondary">Cepa</td>
     <td class="table-secondary">Bodega</td>
         <?php foreach ($vinos as $vino) : ?>
             <tr>
                 <td class="table-secondary"><a href="mostrarVino/<?= $vino->ID_vino ?>"> <?= $vino->Nombre ?> </a></td>
-                <td class="table-secondary"><a href="mostrarCepa/<?= $vino->id_cepa ?>"> <?= $vino->Nombre_cepa ?></a></td>
                 <td class="table-secondary"><a href="mostrarBodega/<?= $vino->id_bodega ?>"><?= $vino->Nombre_bodega ?></a></td>
             </tr>
         <?php endforeach ?>

@@ -1,11 +1,8 @@
 <?php
 
-class VinotecaModel {
-    private $db;
+require_once 'app/models/models.php';
 
-    function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=db_vinoteca;charset=utf8', 'root', '');
-    }
+class VinotecaModel extends Model {
 
     function getVinos() {
         $query = $this->db->prepare('SELECT a.*, b.*, c.* FROM `vino` a INNER JOIN `cepa` b ON a.id_cepa = b.id_cepa INNER JOIN `bodega` c ON a.id_bodega = c.id_bodega ');

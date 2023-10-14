@@ -29,7 +29,7 @@ class AuthController {
         if ($user && password_verify($password, $user->password)){
             
             AuthHelper::login($user);
-            
+                        
             header('Location: ' . BASE_URL);
         } else {
             $this->view->showLogin('Usuario inválido');

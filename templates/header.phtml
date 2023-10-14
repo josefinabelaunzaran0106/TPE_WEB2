@@ -23,14 +23,26 @@
                 <label class="btn btn-secondary" for="option2"><a href="listar">Vinos</a></label>
             </div>
             <div class="col">
+                <label class="btn btn-secondary" for="option2"><a href="mostrarBodegas">Bodegas</a></label>
+            </div>
+            <div class="col">
+                <label class="btn btn-secondary" for="option2"><a href="mostrarCepas">Cepas</a></label>
+            </div>
+            <div class="col">
                 <label class="btn btn-secondary" for="option2"><a href="buscarVinosPorBodega">Buscar por Bodegas</a></label>
             </div>
             <div class="col">
                 <label class="btn btn-secondary" for="option2"><a href="buscarVinosPorCepa">Buscar por Cepas</a></label>
             </div>
+            <?php if (!isset($_SESSION['USER_ID'])) : ?>
             <div class="col">
                 <label class="btn btn-secondary" for="option2"><a href="login">Login</a></label>
             </div>
+            <?php else : ?>
+            <div class="col">
+                <label class="btn btn-secondary" for="option2"><a href="logout">Logout (<?= $_SESSION['USER_EMAIL'] ?>)</a></label>
+            </div>
+            <?php endif ?>
         </div>
     </div>
 </nav>

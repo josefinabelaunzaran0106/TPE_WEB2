@@ -10,7 +10,9 @@ class VinotecaController {
     public function __construct() {
         $this->model = new VinotecaModel();
         $this->view = new VinotecaView();
+        AuthHelper::init();
     }
+
     public function showHome(){
         $this->view->showHome();
     }
@@ -69,6 +71,7 @@ class VinotecaController {
     }
 
     public function showModificarVino($id){
+        AuthHelper::verify();
         $vino = $this->model->getVino($id);
         $bodegas = $this->model->getBodegas();
         $cepas = $this->model->getCepas();
@@ -76,6 +79,7 @@ class VinotecaController {
     }
 
     public function modificarVino($id){
+        AuthHelper::verify();
         $Nombre = $_POST['Nombre'];
         $Tipo = $_POST['Tipo'];
         $Azucar = $_POST['Azucar'];
@@ -91,12 +95,14 @@ class VinotecaController {
         }
     }
     public function showModificarBodega($id){
+        AuthHelper::verify();
         $bodega = $this->model->getBodega($id);
         $this->view->showFormularioModificarBodega($id, $bodega);
     }
     
 
     public function modificarBodega($id){
+        AuthHelper::verify();
         $Nombre_bodega = $_POST['Nombre_bodega'];
         $Ubicación = $_POST['Ubicación'];
         $Año = $_POST['Año'];
@@ -112,12 +118,13 @@ class VinotecaController {
     }
 
     public function showModificarCepa($id){
+        AuthHelper::verify();
         $cepa = $this->model->getCepa($id);
         $this->view->showFormularioModificarCepa($id, $cepa);
     }
     
-
     public function modificarCepa($id){
+        AuthHelper::verify();
         $Nombre_cepa = $_POST['Nombre_cepa'];
         $Aroma = $_POST['Aroma'];
         $Maridaje = $_POST['Maridaje'];
@@ -133,11 +140,13 @@ class VinotecaController {
     }
 
     public function eliminarVino($id){
+        AuthHelper::verify();
         $this->model->deleteVino($id);
         $this->showVinos();
     }
 
     public function eliminarBodega($id){
+        AuthHelper::verify();
         $vinos = $this->model->getVinosPorBodega($id);
         if (empty($vinos)){
             $this->model->deleteBodega($id);
@@ -150,6 +159,7 @@ class VinotecaController {
     }
 
     public function eliminarCepa($id){
+        AuthHelper::verify();
         $vinos = $this->model->getVinosPorCepa($id);
         if (empty($vinos)){
             $this->model->deleteCepa($id);
@@ -162,12 +172,14 @@ class VinotecaController {
     }
 
     public function showAgregarVino(){
+        AuthHelper::verify();
         $bodegas = $this->model->getBodegas();
         $cepas = $this->model->getCepas();
         $this->view->showFormularioAgregarVino($bodegas, $cepas);
     }
 
     public function agregarVino(){
+        AuthHelper::verify();
         $Nombre = $_POST['Nombre'];
         $Tipo = $_POST['Tipo'];
         $Azucar = $_POST['Azucar'];
@@ -188,10 +200,12 @@ class VinotecaController {
     }
 
     public function showAgregarBodega(){
+        AuthHelper::verify();
         $this->view->showFormularioAgregarBodega();
     }
 
     public function agregarBodega(){
+        AuthHelper::verify();
         $Nombre_bodega = $_POST['Nombre_bodega'];
         $Ubicación = $_POST['Ubicación'];
         $Año = $_POST['Año'];
@@ -211,10 +225,12 @@ class VinotecaController {
     }
 
     public function showAgregarCepa(){
+        AuthHelper::verify();
         $this->view->showFormularioAgregarCepa();
     }
 
     public function agregarCepa(){
+        AuthHelper::verify();
         $Nombre_cepa = $_POST['Nombre_cepa'];
         $Aroma = $_POST['Aroma'];
         $Maridaje = $_POST['Maridaje'];

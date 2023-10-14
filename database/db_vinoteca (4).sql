@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2023 a las 00:11:47
+-- Tiempo de generación: 14-10-2023 a las 01:29:00
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -84,7 +84,7 @@ INSERT INTO `cepa` (`id_cepa`, `Nombre_cepa`, `Aroma`, `Maridaje`, `Textura`) VA
 --
 
 CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `email` varchar(45) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -93,8 +93,8 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `email`, `password`) VALUES
-(1, 'webadmin', 'admin');
+INSERT INTO `usuario` (`id`, `email`, `password`) VALUES
+(1, 'webadmin', '$2y$10$TqkqTZJKWJvPircDiqiXaukRHTGFX0VN7aAdDAj07gpvT/66OexR.');
 
 -- --------------------------------------------------------
 
@@ -169,7 +169,7 @@ ALTER TABLE `cepa`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `vino`
@@ -199,7 +199,7 @@ ALTER TABLE `cepa`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `vino`
